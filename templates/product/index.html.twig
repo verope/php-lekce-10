@@ -13,6 +13,8 @@
                 <th>Price</th>
                 <th>Description</th>
                 <th>actions</th>
+                <th>manufacturer</th>
+                <th>supplier</th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +27,14 @@
                 <td>
                     <a href="{{ path('product_show', {'id': product.id}) }}">show</a>
                     <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
+                </td>
+                <td>
+                    {{ product.manufacturer.name }}
+                </td>
+                <td>
+                {% for supplier in product.suppliers %}
+                    {{ supplier.name }}
+                    {% endfor %}
                 </td>
             </tr>
         {% else %}
