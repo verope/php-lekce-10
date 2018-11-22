@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+    <h1>Welcome to homepage</h1>
+
+    Navigation:
+    <ul>
+        <li>Products: <code><a href="{{ path('product_index') }}">{{ path('product_index') }}</a></code></li>
+        <li>Manufacturers: <code><a href="{{ path('manufacturer_index') }}">{{ path('manufacturer_index') }}</a></code></li>
+        <li>Suppliers: <code><a href="{{ path('supplier_index') }}">{{ path('supplier_index') }}</a></code></li>
+    </ul>
+{% endblock %}
